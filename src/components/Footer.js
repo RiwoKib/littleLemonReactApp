@@ -13,10 +13,10 @@ const Footer = () => {
                     <div className="locations">
                         <h5>LOCATIONS</h5>
                         <ul>
-                            <li>Accra</li>
-                            <li>Kumasi</li>
-                            <li>Cape Coast</li>
-                            <li>Tamale</li>
+                            <li>Nairobi CBD</li>
+                            <li>Karen</li>
+                            <li>Parklands</li>
+                            <li>Imara Mall</li>
                         </ul>
                     </div>
                     <div className="opening-times">
@@ -30,7 +30,7 @@ const Footer = () => {
                     <div className="contact">
                         <h5>CONTACT US</h5>
                         <ul>
-                            <li>96 Abafom Road, North Ridge - Accra</li>
+                            <li>Parklands</li>
                             <li>Tel: 020 7928 0678</li>
                             <li>Email: info@littlelemon.com</li>
                         </ul>

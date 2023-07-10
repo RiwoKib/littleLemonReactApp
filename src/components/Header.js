@@ -20,7 +20,7 @@ const Header = () => {
             <ul className={click ? "nav-menu active" : "nav-menu"}>
                 <li><NavLink to="/">Home</NavLink></li>
                 <li><NavLink to="#">About</NavLink></li>
-                <li><NavLink to="#">Menu</NavLink></li>
+                <li><NavLink to="/menu">Menu</NavLink></li>
                 <li><NavLink to="/reservations">Reservations</NavLink></li>
                 <li><NavLink to="#">Order Online</NavLink></li>
                 <li><NavLink to="#">Login</NavLink></li>

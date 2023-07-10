@@ -1,6 +1,6 @@
 .special-card {
     display: grid;
-    grid-template-columns: 31% 31% 31%;
+    grid-template-columns:1fr 1fr 1fr;
     gap: 35px;
     margin-top: 20px;
     
