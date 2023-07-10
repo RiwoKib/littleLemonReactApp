@@ -3,13 +3,11 @@ import "../components/styles/Card.css"
 import { MdDeliveryDining } from "react-icons/md"
 import { NavLink } from 'react-router-dom'
 
-const SpecialsCard = ({specialItems}) => {
-    
-
-     return(
-        <div className='card'>
-            {specialItems.map((specialItem) =>{
-                const {id, image, title,price, description, order} = specialItem;
+function MenuItem({menuItems}) {
+  return (
+    <div className='card'>
+            {menuItems.map((item) =>{
+                const {id, image, title,price, description, order} = item;
                return(
                 <article key={id} className='card-container'>
                     <div className="image-container">
@@ -18,7 +16,6 @@ const SpecialsCard = ({specialItems}) => {
                     <div className="card-text">
                         <div>
                             <h3>{title} <span className="price-tag">{price}</span></h3>
-                            
                         </div>
                         <p>{description}</p>
                         <NavLink to="#">
@@ -32,7 +29,7 @@ const SpecialsCard = ({specialItems}) => {
                )
             })}
        </div>
-     )
+  )
 }
 
-export default SpecialsCard
+export default MenuItem

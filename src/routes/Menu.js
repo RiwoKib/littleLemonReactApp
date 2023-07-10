@@ -7,7 +7,7 @@ const Menu = () => {
   return (
     <div>
       <Header />
-      <h1 style={{textAlign: "center", paddingTop: "15%"}}>Menu</h1>
+      <h1 style={{textAlign: "center", marginBottom: '-100px'}}>Menu</h1>
       <MenuItems/>
     </div>
   )
