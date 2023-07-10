@@ -17,7 +17,7 @@ const Specials = () => {
       return;
     }
 
-    const newItems = category.filter((item) => item.category === category);
+    const newItems = specials.filter((item) => item.category === category);
 
     setSpecialMenu(newItems);
 
@@ -30,7 +30,7 @@ const Specials = () => {
             <div className="btn-container">
               <NavLink to="/menu"><button className="btn btn-menu">Online Menu</button></NavLink>
             </div>
-      </div>
+      </div> 
 
       <Categories categories={categories} filterItems={filterItems} />
       <SpecialsCard specialItems = {specialMenu}/>

@@ -39,9 +39,9 @@ const specials =  [
         title: 'buttermilk pancakes',
         category: 'Thursday',
         price: 15.99,
-        img: item1,
+        image: item1,
         description: "I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed ",
-        order: "Order a delivery"
+        order: "Order a delivery"   
       },
       {
         id: 5,
