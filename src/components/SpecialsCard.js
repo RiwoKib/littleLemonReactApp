@@ -9,9 +9,9 @@ const SpecialsCard = ({specialItems}) => {
      return(
         <div className='special-card'>
             {specialItems.map((specialItem) =>{
-                const {image, title,price, description, order} = specialItem;
+                const {id, image, title,price, description, order} = specialItem;
                return(
-                <article className='special-card-container'>
+                <article key={id} className='special-card-container'>
                     <div className="image-container">
                         <img src={image} alt="Special dessert" />
                     </div>

@@ -4,6 +4,7 @@ import Dessert3 from "./components/assets/creme.jpg"
 
 const specials =  [
     {   
+        id: 1,
         image: Dessert1,
         title: "Greek Salad",
         price: "$12.99",
@@ -11,6 +12,7 @@ const specials =  [
         order: "Order a delivery"
     },
     {
+        id: 2,
         image: Dessert2,
         title: "Bruschetta",
         price: "$5.99",
@@ -18,6 +20,7 @@ const specials =  [
         order: "Order a delivery"
     },
     {
+        id: 3,
         image: Dessert3,
         title: "Lemon Dessert",
         price: "$5.00",
