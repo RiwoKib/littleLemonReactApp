@@ -16,6 +16,7 @@ const menu = [
       price: 15.99,
       image: item1,
       description: "I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed ",
+      order: "Order a delivery"
     },
     {
       id: 2,
@@ -24,6 +25,7 @@ const menu = [
       price: 13.99,
       image: item2,
       description:" vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats ",
+      order: "Order a delivery"
     },
     {
       id: 3,
@@ -32,6 +34,7 @@ const menu = [
       price: 6.99,
       image: item3,
       description: "ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.",
+      order: "Order a delivery"
     },
     {
       id: 4,
@@ -40,6 +43,7 @@ const menu = [
       price: 20.99,
       image:item4,
       description: "Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, ",
+      order: "Order a delivery"
     },
     {
       id: 5,
@@ -48,6 +52,7 @@ const menu = [
       price: 22.99,
       image: item5,
       description: "franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up ",
+      order: "Order a delivery"
     },
     {
       id: 6,
@@ -56,6 +61,7 @@ const menu = [
       price: 18.99,
       image: item6,
       description: "Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday",
+      order: "Order a delivery"
     },
     {
       id: 7,
@@ -64,6 +70,7 @@ const menu = [
       price: 8.99,
       image: item7,
       description: "carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird ",
+      order: "Order a delivery"
     },
     {
       id: 8,
@@ -72,6 +79,7 @@ const menu = [
       price: 12.99,
       image: item8,
       description: "on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut",
+      order: "Order a delivery"
     },
     {
       id: 9,
@@ -80,6 +88,7 @@ const menu = [
       price: 16.99,
       image: item9,
       description: "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.",
+      order: "Order a delivery"
     },
   ];
   export default menu;

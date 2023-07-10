@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import items from '../Menu'
+import items from '../TheMenu'
 import MenuItem from './MenuItem'
 import Categories from './Categories'
 

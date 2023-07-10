@@ -1,14 +1,16 @@
 import React from 'react';
-import Header from '../components/Header'; 
+import HeaderElement from '../components/HeaderElement'; 
 import MenuItems from '../components/MenuItems';
+import Footer from '../components/Footer';
 
 
 const Menu = () => {
   return (
     <div>
-      <Header />
+      <HeaderElement />
       <h1 style={{textAlign: "center", marginBottom: '-100px'}}>Menu</h1>
       <MenuItems/>
+      <Footer/>
     </div>
   )
 }
