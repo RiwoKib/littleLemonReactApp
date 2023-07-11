@@ -23,6 +23,7 @@ function Form() {
         }))
     }
 
+
     const validateForm = () => {
         let err = {}
         if (formData.name === "") {
@@ -31,16 +32,16 @@ function Form() {
         if (formData.email === "") {
             err.email = "* Email required!" 
         }else{
-            let regex =  /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/
+            let regex =   /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/
             if(!regex.test(formData.email)) {
                 err.email = "Email not valid!"
             }
-        }
-
+        } 
 
         if (formData.telephone === "") {
             err.telephone = "* Phone number required!" 
         }else{
+            
             let phoneRegex = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{3}[-\s.]?[0-9]{3}$/
             if(!phoneRegex.test(formData.telephone)) {
                 err.telephone = "Telephone number not valid!"
