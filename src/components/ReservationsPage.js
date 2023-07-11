@@ -1,6 +1,6 @@
 import React from 'react';
 import "./styles/ReservationsContent.css";
-import Form from './Form';
+import Form from './Form'; 
 
 function ReservationsPage() {
 
@@ -15,7 +15,7 @@ function ReservationsPage() {
             <div className="form">
                 <h1>Reserve a Table</h1>
                 <p>Please fill in and submit form to book your reservation at Little Lemon.</p>
-                <Form />
+                <Form/>
             </div>
         </div>
     </div>

@@ -79,7 +79,7 @@ input[type=datetime-local] {
 
 .guestsdate {
     display: grid;
-    grid-template-columns: 68% 28%;
+    grid-template-columns: 2fr 1fr;
     gap: 4%;
 }
 
@@ -120,10 +120,11 @@ select {
     transition: 0.3s;
 }
 
-.error-message {
-    font-size: 15px;
+ 
+
+.non-valid{
     color: red;
-    margin-top: 5px;
+    font-size: 15px;
 }
 
 

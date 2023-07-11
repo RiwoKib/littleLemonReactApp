@@ -1,73 +1,144 @@
-import React from 'react';
-import "./styles/ReservationsContent.css";
-import {useForm} from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup"
-import * as yup from "yup";
+import React, {useState} from 'react';
+import "./styles/ReservationsContent.css"; 
 
-const schema = yup.object({
-    name: yup.string().required("Full name is a required field!"),
-    email: yup.string().required("Email is a required field!").email("Email is not valid!"),
-    telephone: yup.string().required("Telephone is a required field!").matches(/^(\+\d{2,3}\s)?\(?\d{3}\)?[\s.-]\d{2}[\s.-]\d{3}[\s.-]\d{4}$/, "Phone number must match the form 233 00 000 0000"),
-    guests: yup.number().min(1, "There must be at least 1 guest!").required("Please specify number of guests per table!"),
-    date: yup.string().required("Please select date and time!"),
-})
+
 
 function Form() {
-
-
-    const { handleSubmit, register, formState: { errors } } = useForm({
-        resolver: yupResolver(schema)
+    
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        telephone: "",
+        occasion: "",
+        guests: "",
+        date: "",
     })
 
-    console.log(errors)
+    const [formError, setFormError] = useState({})
 
-    const formSubmit = (data) => {
-        console.table(data)
+    const onChangeHandler = (event) => {
+        setFormData(()=>({
+            ...formData,
+            [event.target.name]: event.target.value
+        }))
     }
 
+    const validateForm = () => {
+        let err = {}
+        if (formData.name === "") {
+            err.name = "* Full name required!" 
+        }
+        if (formData.email === "") {
+            err.email = "* Email required!" 
+        }else{
+            let regex =  /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/
+            if(!regex.test(formData.email)) {
+                err.email = "Email not valid!"
+            }
+        }
+
+
+        if (formData.telephone === "") {
+            err.telephone = "* Phone number required!" 
+        }else{
+            let phoneRegex = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{3}[-\s.]?[0-9]{3}$/
+            if(!phoneRegex.test(formData.telephone)) {
+                err.telephone = "Telephone number not valid!"
+            }
+        }
+
+
+        if (formData.guests === "") {
+            err.guests = "* How many guests?" 
+        }
+        if (formData.date === "") {
+            err.date = "* Please specify date and time!" 
+        }
+
+        setFormError({...err})
+        return Object.keys(err).length < 1;
+    }
+
+    const onSubmitHandler = (event) => {
+        event.preventDefault();
+        console.table(formData)
+
+        let isValid = validateForm()
+        if(isValid) {
+            alert("Submitted")
+        }
+    }
+
+
     return (
-        <form onSubmit={handleSubmit(formSubmit)}>
+        <form onSubmit={onSubmitHandler}>
             <fieldset>
                 <div className="field">
                     <label htmlFor="name">Full Name</label>
-                    <input type="text" placeholder="John Doe" name="name" {...register("name")} />
-                    <span className="error-message">{errors.name?.message}</span>
+                    <input
+                        type="text"
+                        placeholder="Little Lemon"
+                        name="name"
+                        onChange={onChangeHandler}
+                    />
+                    <span className="non-valid">{formError.name}</span>
                 </div>
                 <div className="field">
                     <label htmlFor="email">Email</label>
-                    <input type="text" placeholder="text@email.com" name="email" {...register("email")}/>
-                    <span className="error-message">{errors.email?.message}</span>
+                    <input
+                        type="text"
+                        placeholder="info@littlelemon.com"
+                        name="email"
+                        onChange={onChangeHandler}
+                    />
+                    <span className="non-valid">{formError.email}</span>
                 </div>
                 <div className="field">
                     <label htmlFor="telephone">Telephone</label>
-                    <input type="tel" placeholder="233 00 000 0000" name="telephone" {...register("telephone")}/>
-                    <span className="error-message">{errors.telephone?.message}</span>
+                    <input
+                        type="tel"
+                        placeholder="+(254) 700-000-000"
+                        name="telephone"
+                        onChange={onChangeHandler}
+                    />
+                    <span className="non-valid">{formError.telephone}</span>
                 </div>
-
-                {/*<div className="guestsdate">*/}
-                <div className="field occasion">
-                    <label htmlFor="occasion">Occasion (optional)</label>
-                    <div className="options">
-                        <select name="occasion" {...register("occasion")}>
-                            <option value="select">Select occasion</option>
-                            <option value="birthday">Birthday</option>
-                            <option value="engagement">Engagement</option>
-                            <option value="anniversary">Anniversary</option>
-                        </select>
+                <div className="guestsdate">
+                    <div className="field occasion">
+                        <label htmlFor="occasion">Occasion (optional)</label>
+                        <div className="options">
+                            <select name="occasion" onChange={onChangeHandler}>
+                                <option value="select">Select occasion</option>
+                                <option value="birthday">Birthday</option>
+                                <option value="engagement">Engagement</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="anniversary">Graduation</option>
+                            </select>
+                        </div>
+                    </div> 
+                    <div className="field guest">
+                        <label htmlFor="guests">Guests</label>
+                        <input
+                            type="number"
+                            placeholder="1"
+                            min='1'
+                            name="guests"
+                            onChange={onChangeHandler}
+                        /> 
+                        <span className="non-valid">{formError.guests}</span>
                     </div>
                 </div>
-                <div className="field guest">
-                    <label htmlFor="guests">Guests</label>
-                    <input type="number" placeholder="2" name="guests" {...register("guests")}/> 
-                    <span className="error-message">{errors.guests?.message}</span>
-                </div>
-                {/*</div>*/}
-                        
+               
+                
                 <div className="field">
-                    <label htmlFor="date">Date & Time</label>
-                    <input type="datetime-local" name="date" {...register("date")} />
-                    <span className="error-message">{errors.date?.message}</span>
-                </div>
+                        <label htmlFor="date">Date & Time</label>
+                        <input 
+                            type="datetime-local" 
+                            name="date"
+                            onChange={onChangeHandler}
+                        />
+                        <span className="non-valid">{formError.date}</span>
+                    </div>
                 <button className="reserve-btn" type="submit">Reserve</button>
             </fieldset>
         </form>
