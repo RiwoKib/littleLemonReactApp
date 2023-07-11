@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import "./styles/ReservationsContent.css"; 
 
-
+ 
 
 function Form() {
     
