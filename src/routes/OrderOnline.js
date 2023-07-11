@@ -1,11 +1,14 @@
 import React from 'react';
-import Header from '../components/Header';
+import HeaderElement from '../components/HeaderElement'; 
+import Footer from '../components/Footer';
+import OnlineOrder from '../components/OnlineOrder';
 
 const OrderOnline = () => {
   return (
     <div>
-      <Header />
-      <h1 style={{textAlign: "center", paddingTop: "15%"}}>Order Online</h1>
+     <HeaderElement />   
+      <OnlineOrder/>
+      <Footer/>
     </div>
   )
 }
