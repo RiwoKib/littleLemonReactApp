@@ -9,7 +9,7 @@
     <div className="hero-section-background">
       <div className="hero-section-container">
           <div className="section-left">
-              <h1>Order You Fresh and Healthy Food Anytime</h1> 
+              <h1>Order Your Fresh and Healthy Food Anytime</h1> 
               <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
               
               <SearchLocation/> 
