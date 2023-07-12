@@ -1,11 +1,12 @@
 import React from 'react';
-import Header from '../components/Header'
+import HeaderElement from '../components/HeaderElement' 
+import LoginPage from '../components/LoginPage'
 
 const Login = () => {
   return (
     <div>
-      <Header />
-      <h1 style={{textAlign: "center", paddingTop: "15%"}}>Login</h1>
+      <HeaderElement/> 
+      <LoginPage/>
     </div>
   )
 }

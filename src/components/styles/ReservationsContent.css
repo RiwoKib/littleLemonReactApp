@@ -4,11 +4,26 @@
     background-size: cover;
 }
 
+.wrapper{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.73)), url("../assets/loginbannerlittlelemon.jpg");
+    width: 100%;
+    background-size: cover;
+}
+
 .res-content-container {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 100px;
+    width: 85%;
+    margin: 0px auto;
+    padding: 80px 0;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
     width: 85%;
     margin: 0px auto;
     padding: 80px 0;
@@ -36,6 +51,23 @@
     border-radius: 10px;
     padding: 30px 40px 50px;
     text-align: left;
+}
+
+/* --clr-categories: #f4ce14;
+--clr-categories-text: #c59d5f; */
+
+.sign-up-form {
+    width: 40%;
+    height: auto;
+    background-color: #495e57;
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px 50px;
+    text-align: left;
+}
+
+.sign-up-form h2 {
+    color: #f4ce14;
 }
 
 .form h1 {
@@ -103,7 +135,7 @@ select {
     color: #949494;
 }
 
-.reserve-btn {
+.submit-btn {
     width: 100%;
     padding: 20px;
     cursor: pointer;
@@ -115,11 +147,17 @@ select {
     color:#fff;
 }
 
-.reserve-btn:hover {
+.submit-btn:hover {
     background-color: #495e57;
     transition: 0.3s;
 }
+ 
 
+.signup-btn:hover {
+    background-color: #495e57;
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
  
 
 .non-valid{

@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from '../components/Header'
+import HeaderElement from '../components/HeaderElement'
 
 const About = () => {
   return (
     <div>
-      <Header />
+      <HeaderElement />
       <h1 style={{textAlign: "center", paddingTop: "15%"}}>About</h1>
     </div>
   )
